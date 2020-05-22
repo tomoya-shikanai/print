@@ -20,13 +20,24 @@
 <div id="oekaki-2"></div>
 <script>make15("oekaki-2", f2s(function() {/*
 40 K=INKEY()
-50 IF K=28 X=X-1
-60 IF K=30 Y=Y-1
+50 IF K==28 X=X-1
+60 IF K==30 Y=Y-1
 110 GOTO40
 */}))</script>
 <b>やってみよう！</b><br>
 1. ペンを「みぎ」、「した」もうごかせるようにしてみよう<br>
+<!-- <div id="oekaki-3"></div>
+<script>make15("oekaki-3", f2s(function() {/*
+70 IF K==29 X=X+1
+80 IF K==31 Y=Y+1
+*/}))</script> -->
+
 2. ペンの文字をいろいろかえてみよう<br>
+<!-- <div id="oekaki-4"></div>
+<script>make15("oekaki-4", f2s(function() {/*
+10 CLS:X=16:Y=10:P=236
+*/}))</script> -->
+
 【上級編】<br>
 3. ペンを「ななめ」にもうごかしてみよう<br>
 4. 将棋の「桂馬」のうごき、できるかな？<br>
@@ -48,9 +59,29 @@
 <section>
 <b>かいぞうしてみよう！</b><br>
 ・「消しゴム」機能をつけてみよう<br>
+・「全消し」機能をつけてみよう<br>
 ・ペンがいどうできる場所を制限してみよう<br>
+<!-- <div id="oekaki-5"></div>
+<script>make15("oekaki-5", f2s(function() {/*
+81 IF X>31 X=0 ELSE IF X<0 X=31
+82 IF Y>22 Y=0 ELSE IF Y<0 Y=22
+*/}))</script> -->
 ・お絵描きしながらペンの文字を変える機能をつけてみよう<br>
+<!-- <div id="oekaki-6"></div>
+<script>make15("oekaki-6", f2s(function() {/*
+45 IF K==0 GOTO100
+85 IF K<28 OR K>31 GOTO90 ELSE GOTO100
+90 P=K
+110 WAIT5:GOTO40
+*/}))</script> -->
 ・ペンの場所を画面に数字で出力してみよう<br>
+<!-- <div id="oekaki-7"></div>
+<script>make15("oekaki-7", f2s(function() {/*
+20 LC0,0:?"PEN:";CHR$(P)
+30 LC8,0:?"X:";X;", Y:";Y;" "
+90 P=K:LC0,0:?"PEN:";CHR$(P)
+110 WAIT5:GOTO30
+*/}))</script> -->
 </section>
 
 <div id="credit"><a href=https://creativecommons.org/licenses/by/4.0/deed.ja>CC BY</a> <a href="http://ichigojam.net/print/">IchigoJamプリント</a> http://ichigojam.net/print/ 
