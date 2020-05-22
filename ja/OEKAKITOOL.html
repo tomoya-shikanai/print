@@ -1,0 +1,58 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<title>お絵描きツールbyPCN山形米沢</title>
+<link rel="stylesheet" type="text/css" href="ichigojamlist.css">
+<script src="ichigojamlist.js"></script>
+</head><body>
+
+<h1>お絵描きツール① - IchigoJam by PCN山形米沢</h1>
+
+<section>
+ペンとうじょう（"A"にすきな文字をいれてね）
+<div id="oekaki-1"></div>
+<script>make15("oekaki-1", f2s(function() {/*
+10 CLS:X=16:Y=10:P=ASC("A")
+100 LC X,Y:?CHR$(P)
+*/}))</script>
+</section>
+
+<section>
+カーソルでうごかせるようにする（まずは「ひだり」と「うえ」）
+<div id="oekaki-2"></div>
+<script>make15("oekaki-2", f2s(function() {/*
+40 K=INKEY()
+50 IF K=28 X=X-1
+60 IF K=30 Y=Y-1
+110 GOTO40
+*/}))</script>
+<b>やってみよう！</b><br>
+1. ペンを「みぎ」、「した」もうごかせるようにしてみよう<br>
+2. ペンの文字をいろいろかえてみよう<br>
+【上級編】<br>
+3. ペンを「ななめ」にもうごかしてみよう<br>
+4. 将棋の「桂馬」のうごき、できるかな？<br>
+</section>
+
+<section>
+<b>ヒント</b><br>
+・Kが28で「ひだり」、Kがいくつのとき「みぎ」になるかな？<br>
+・XとYはがめんにでてくるペンの場所<br>
+</section>
+
+<section>
+<b>しらべてみよう！</b><br>
+・ペンはどこまでうごかせるかな？<br>
+・CLSコマンド、INKEYコマンドってなんだろう？<br>
+・ASCコマンド、CHRコマンドってなんだろう？<br>
+</section>
+
+<section>
+<b>かいぞうしてみよう！</b><br>
+・「消しゴム」機能をつけてみよう<br>
+・ペンがいどうできる場所を制限してみよう<br>
+・お絵描きしながらペンの文字を変える機能をつけてみよう<br>
+・ペンの場所を画面に数字で出力してみよう<br>
+</section>
+
+<div id="credit"><a href=https://creativecommons.org/licenses/by/4.0/deed.ja>CC BY</a> <a href="http://ichigojam.net/print/">IchigoJamプリント</a> http://ichigojam.net/print/ 
+<a href="http://ichigojam.net/">IchigoJam&reg;jig.jp</a></div>
+</body></html>
