@@ -4,7 +4,7 @@
 <script src="ichigojamlist.js"></script>
 </head><body>
 
-<h1>お絵描きツール① - IchigoJam by PCN山形米沢</h1>
+<h1>お絵描きツール - IchigoJam by PCN山形米沢</h1>
 
 <section>
 ペンとうじょう（"A"にすきな文字をいれてね）
@@ -26,63 +26,77 @@
 */}))</script>
 <b>やってみよう！</b><br>
 1. ペンを「みぎ」、「した」もうごかせるようにしてみよう<br>
-<!-- <div id="oekaki-3"></div>
+<div id="oekaki-3"></div>
 <script>make15("oekaki-3", f2s(function() {/*
 70 IF K==29 X=X+1
 80 IF K==31 Y=Y+1
-*/}))</script> -->
-
-2. ペンの文字をいろいろかえてみよう<br>
-<!-- <div id="oekaki-4"></div>
-<script>make15("oekaki-4", f2s(function() {/*
-10 CLS:X=16:Y=10:P=236
-*/}))</script> -->
-
-【上級編】<br>
-3. ペンを「ななめ」にもうごかしてみよう<br>
-4. 将棋の「桂馬」のうごき、できるかな？<br>
-</section>
-
-<section>
-<b>ヒント</b><br>
+*/}))</script>
+<!-- <b>ヒント</b><br>
 ・Kが28で「ひだり」、Kがいくつのとき「みぎ」になるかな？<br>
 ・XとYはがめんにでてくるペンの場所<br>
-</section>
+<br> -->
 
-<section>
-<b>しらべてみよう！</b><br>
-・ペンはどこまでうごかせるかな？<br>
-・CLSコマンド、INKEYコマンドってなんだろう？<br>
-・ASCコマンド、CHRコマンドってなんだろう？<br>
-</section>
+2. ペンの文字をいろいろかえてみよう<br>
+<div id="oekaki-4"></div>
+<script>make15("oekaki-4", f2s(function() {/*
+10 CLS:X=16:Y=10:P=236
+*/}))</script>
+
+<!-- 【上級編】<br>
+3. ペンを「ななめ」にもうごかしてみよう<br>
+<div id="oekaki-4"></div>
+<script>make15("oekaki-4", f2s(function() {/*
+10 CLS:X=16:Y=10:P=236
+*/}))</script>
+4. 将棋の「桂馬」のうごき、できるかな？<br>
+</section> -->
 
 <section>
 <b>かいぞうしてみよう！</b><br>
-・「消しゴム」機能をつけてみよう<br>
-・「全消し」機能をつけてみよう<br>
 ・ペンがいどうできる場所を制限してみよう<br>
-<!-- <div id="oekaki-5"></div>
+<div id="oekaki-5"></div>
 <script>make15("oekaki-5", f2s(function() {/*
 81 IF X>31 X=0 ELSE IF X<0 X=31
 82 IF Y>22 Y=0 ELSE IF Y<0 Y=22
-*/}))</script> -->
+*/}))</script>
 ・お絵描きしながらペンの文字を変える機能をつけてみよう<br>
-<!-- <div id="oekaki-6"></div>
+<div id="oekaki-6"></div>
 <script>make15("oekaki-6", f2s(function() {/*
 45 IF K==0 GOTO100
 85 IF K<28 OR K>31 GOTO90 ELSE GOTO100
 90 P=K
 110 WAIT5:GOTO40
-*/}))</script> -->
+*/}))</script>
 ・ペンの場所を画面に数字で出力してみよう<br>
-<!-- <div id="oekaki-7"></div>
+<div id="oekaki-7"></div>
 <script>make15("oekaki-7", f2s(function() {/*
 20 LC0,0:?"PEN:";CHR$(P)
 30 LC8,0:?"X:";X;", Y:";Y;" "
 90 P=K:LC0,0:?"PEN:";CHR$(P)
 110 WAIT5:GOTO30
-*/}))</script> -->
+*/}))</script>
+<!-- ・「消しゴム」機能をつけてみよう<br>
+・「全消し」機能をつけてみよう<br> -->
+・絵の保存機能をつけてみよう
+<div id="oekaki-8"></div>
+<script>make15("oekaki-8", f2s(function() {/*
+15 COPY #900,#E00,512
+105 IF K==10 COPY#E00,#900,512:SAVE
+*/}))</script>
+
+・カーソルを表示しよう
+<div id="oekaki-9"></div>
+<script>make15("oekaki-9", f2s(function() {/*
+45 IF K==0 LC X,Y:?CHR$(1):WAIT5:GOTO100
+*/}))</script>
 </section>
+
+<!-- <section>
+    <b>しらべてみよう！</b><br>
+    ・ペンはどこまでうごかせるかな？<br>
+    ・CLSコマンド、INKEYコマンドってなんだろう？<br>
+    ・ASCコマンド、CHRコマンドってなんだろう？<br>
+</section> -->
 
 <div id="credit"><a href=https://creativecommons.org/licenses/by/4.0/deed.ja>CC BY</a> <a href="http://ichigojam.net/print/">IchigoJamプリント</a> http://ichigojam.net/print/ 
 <a href="http://ichigojam.net/">IchigoJam&reg;jig.jp</a></div>
